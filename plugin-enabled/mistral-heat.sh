@@ -23,7 +23,6 @@ enable_plugin heat-dashboard https://github.com/openstack/heat-dashboard.git ref
 enable_plugin mistral https://github.com/openstack/mistral.git refs/heads/stable/2023.2
 EOF
 
-sudo mkdir ~/devstack-init
-tmux new-session -d -s devstack-init "~/devstack/stack.sh > ~/devstack-init/devstack-init.log 2>&1"
+tmux new-session -d -s devstack-init "~/devstack/stack.sh"
 
-echo "You can view log at file ~/devstack-init/devstack-init.log"
+echo "tmux list-session"
