@@ -26,4 +26,4 @@ EOF
 sudo mkdir ~/devstack-init
 tmux new-session -d -s devstack-init "~/devstack/stack.sh > ~/devstack-init/devstack-init.log 2>&1"
 
-echo "You can view log at file /var/log/devstack-init/devstack-init.log"
+echo "You can view log at file ~/devstack-init/devstack-init.log"
