@@ -4,7 +4,7 @@ echo "TRY TO INIT DEVSTACK"
 
 git clone https://github.com/openstack/devstack.git ~/devstack
 
-cd ~/devstack && git checkout stable/2023.2
+cd ~/devstack && git checkout stable/2025.1
 
 sudo ~/devstack/tools/create-stack-user.sh
 
