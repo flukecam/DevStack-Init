@@ -19,3 +19,9 @@ SERVICE_PASSWORD=Zr4mUM9eU03Q7c8arEnt
 EOF
 
 tmux new-session -d -s devstack-init "~/devstack/stack.sh"
+
+echo ""
+echo -e "\033[0;32m## Tmux session listed below\033[0m"
+tmux list-session
+echo ""
+echo -e "You can connect to tmux session via command \033[0;31mtmux attach-session -t devstack-init"
