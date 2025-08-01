@@ -12,6 +12,8 @@ sudo rm -rf /opt/stack
 
 cat << EOF > ~/devstack/local.conf
 [[local|localrc]]
+HOST_IP=127.0.0.1
+SERVICE_HOST=$HOST_IP
 FLOATING_RANGE=10.58.1.192/27
 FIXED_RANGE=10.11.12.0/24
 IP_VERSION=4
