@@ -26,7 +26,7 @@ RABBIT_PASSWORD=QSY2B0S817AAY902Ct3b
 SERVICE_PASSWORD=Zr4mUM9eU03Q7c8arEnt
 
 # Nova 
-NOVNCPROXY_URL="http://$externalip:6080/vnc_lite.html
+NOVNCPROXY_URL="http://$externalip:6080/vnc_lite.html"
 LIBVIRT_TYPE=qemu
 
 # Swift
