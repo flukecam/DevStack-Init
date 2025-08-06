@@ -2,13 +2,14 @@
 
 echo "TRY TO INIT DEVSTACK"
 
+sudo useradd -s /bin/bash -d /opt/stack -m stack
+sudo chmod +x /opt/stack
+echo "stack ALL=(ALL) NOPASSWD: ALL" | sudo tee /etc/sudoers.d/stack
+sudo -u stack -i
+
 git clone https://github.com/openstack/devstack.git ~/devstack
 
 cd ~/devstack && git checkout stable/2025.1
-
-sudo ~/devstack/tools/create-stack-user.sh
-
-sudo rm -rf /opt/stack
 
 externalip=$(curl 169.254.169.254/latest/meta-data/public-ipv4)
 internalip=$(curl 169.254.169.254/latest/meta-data/local-ipv4)
@@ -20,6 +21,7 @@ SERVICE_HOST=$HOST_IP
 FLOATING_RANGE=10.58.1.192/27
 FIXED_RANGE=10.11.12.0/24
 IP_VERSION=4
+SERVICE_IP_VERSION=4
 ADMIN_PASSWORD=k76iLgK4zVWDtUYLLytZ
 DATABASE_PASSWORD=1fZJo3kWf4RgqeohsI8Y
 RABBIT_PASSWORD=QSY2B0S817AAY902Ct3b
